@@ -15,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -58,9 +57,9 @@ body {
   color: #555;
 }
 
-/* Main content */
+
 .content {
-  margin-left: 35%; /* Shift content right to avoid sidebar overlap */
+  margin-left: 35%;
   padding: 60px;
 }
 
@@ -101,4 +100,54 @@ body {
 .skills-category ul {
   list-style: none;
   padding-left: 0;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px 15px;
+    box-shadow: none;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 30px 20px;
+  }
+
+  .block h1 {
+    font-size: 20px;
+  }
+
+  .block ul {
+    font-size: 14px;
+  }
+
+  .skills-group {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .skills-category h2 {
+    font-size: 16px;
+  }
 }
